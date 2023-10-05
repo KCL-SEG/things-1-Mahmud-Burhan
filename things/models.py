@@ -1,7 +1,6 @@
 from django.db import models
 
-class User(models.Model):
-    name = models.CharField()
-    description = models.CharField()
-    quantity = models.IntegerField()
-
+class Thing(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=120)
+    quantity = models.IntegerField(range(0, 101))
